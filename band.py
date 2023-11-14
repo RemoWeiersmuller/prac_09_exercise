@@ -1,6 +1,5 @@
 """Band class stores details to musicians. """
 
-from musician import Musician
 
 class Band:
     def __init__(self, name: str):
@@ -10,7 +9,8 @@ class Band:
 
     def __str__(self):
         """Return a string of the object."""
-        return f"{self.name} {self.musicians}"
+        musicians_string = ", ".join(str(musician) for musician in self.musicians)
+        return f"{self.name} ({musicians_string})"
 
     def add(self, musician):
         """Add a new band member."""
