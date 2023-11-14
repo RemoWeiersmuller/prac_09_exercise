@@ -18,4 +18,5 @@ class Band:
 
     def play(self):
         for musician in self.musicians:
-            musician.play()
+            player = musician.play()
+            print(player)
