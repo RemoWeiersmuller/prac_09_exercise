@@ -1,4 +1,8 @@
-"""Band class stores details to musicians. """
+"""
+Band class stores details to musicians.
+CP-1404
+Jason Kennedy and Remo Weiersmuller
+"""
 
 
 class Band:
@@ -17,6 +21,6 @@ class Band:
         self.musicians.append(musician)
 
     def play(self):
-        for musician in self.musicians:
-            player = musician.play()
-            print(player)
+        """Returns a string of the band's musician(s) playing."""
+        return "\n".join(musician.play() for musician in self.musicians)
+
